@@ -30,8 +30,8 @@ A modern, AI-powered web application that analyzes your resume and recommends pe
 
 ### 1. **Clone the Repository**
 ```sh
-git clone https://github.com/yourusername/Generative-AI-Powered-Job-Recommender-System.git
-cd Generative-AI-Powered-Job-Recommender-System-main
+git clone https://github.com/ankit-kumarz/AI_Powered_Job_Recommender_System.git
+cd AI_Powered_Job_Recommender_System_main
 ```
 
 ### 2. **Install Backend Dependencies**
@@ -77,5 +77,3 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 
 ## 📄 License
 [MIT](LICENSE)
-
-# AI-Powered-Job-Recommender-System
