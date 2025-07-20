@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Job Recommender</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="gradient-bg"></div>
+    <div class="container">
+        <h1><i class="fa-solid fa-robot"></i> AI Job Recommender</h1>
+        <form id="resumeForm" class="glass-card">
+            <label for="resumeInput"><i class="fa-solid fa-file-pdf"></i> Upload your resume (PDF):</label>
+            <input type="file" id="resumeInput" name="resume" accept="application/pdf" required />
+            <button type="submit" class="gradient-btn"><i class="fa-solid fa-magnifying-glass-chart"></i> Analyze Resume</button>
+        </form>
+        <div id="loading" class="hidden">
+            <div class="spinner"></div>
+            <span>Processing...</span>
+        </div>
+        <section id="summarySection" class="result-section hidden glass-card">
+            <h2><i class="fa-solid fa-file-lines"></i> Resume Summary</h2>
+            <div id="summary"></div>
+        </section>
+        <section id="gapsSection" class="result-section hidden glass-card">
+            <h2><i class="fa-solid fa-user-gear"></i> Skill Gaps & Missing Areas</h2>
+            <div id="gaps"></div>
+        </section>
+        <section id="roadmapSection" class="result-section hidden glass-card">
+            <h2><i class="fa-solid fa-rocket"></i> Future Roadmap & Preparation Strategy</h2>
+            <div id="roadmap"></div>
+        </section>
+        <button id="getJobsBtn" class="hidden gradient-btn"><i class="fa-solid fa-briefcase"></i> Get Job Recommendations</button>
+        <section id="jobsSection" class="result-section hidden glass-card">
+            <h2><i class="fa-brands fa-linkedin"></i> Top LinkedIn Jobs</h2>
+            <div id="linkedinJobs"></div>
+            <h2><i class="fa-solid fa-briefcase"></i> Top Naukri Jobs (India)</h2>
+            <div id="naukriJobs"></div>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html> 

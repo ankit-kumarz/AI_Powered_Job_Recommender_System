@@ -1,0 +1,180 @@
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.gradient-bg {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    background: linear-gradient(120deg, #6a11cb 0%, #2575fc 100%);
+    background-size: 200% 200%;
+    animation: gradientMove 8s ease-in-out infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 480px;
+    margin: 60px auto 0 auto;
+    background: rgba(255,255,255,0.15);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    padding: 40px 32px 48px 32px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1.5px solid rgba(255,255,255,0.25);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 32px;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba(106,17,203,0.18);
+}
+
+form.glass-card, .glass-card.result-section {
+    background: rgba(255,255,255,0.35);
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(106,17,203,0.08);
+    padding: 24px 18px 18px 18px;
+    margin-bottom: 24px;
+    border: 1px solid rgba(255,255,255,0.18);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+label {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+}
+input[type="file"] {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1.5px solid #bdbdbd;
+    background: #f8fafd;
+    font-size: 1rem;
+    margin-bottom: 18px;
+    width: 100%;
+}
+.gradient-btn {
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 0;
+    font-size: 1.08rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(106,17,203,0.10);
+    margin-top: 8px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.gradient-btn:hover, .gradient-btn:focus {
+    background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 4px 16px rgba(37,117,252,0.18);
+}
+
+.result-section {
+    margin-top: 28px;
+    padding: 18px 16px;
+    background: rgba(255,255,255,0.45);
+    border-radius: 14px;
+    box-shadow: 0 1px 8px rgba(106,17,203,0.06);
+    border: 1px solid rgba(255,255,255,0.13);
+    color: #222;
+    transition: box-shadow 0.2s;
+}
+.result-section h2 {
+    color: #2575fc;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #2575fc;
+    margin: 18px 0;
+    gap: 12px;
+}
+.spinner {
+    width: 36px;
+    height: 36px;
+    border: 4px solid #fff;
+    border-top: 4px solid #2575fc;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 4px;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.job-card {
+    background: rgba(37,117,252,0.08);
+    border-radius: 10px;
+    padding: 14px 12px;
+    margin-bottom: 14px;
+    box-shadow: 0 1px 4px rgba(37,117,252,0.08);
+    border: 1px solid rgba(37,117,252,0.10);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.job-card:hover {
+    box-shadow: 0 4px 16px rgba(37,117,252,0.18);
+    transform: translateY(-2px) scale(1.02);
+}
+.job-card a {
+    color: #2575fc;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@media (max-width: 600px) {
+    .container {
+        max-width: 98vw;
+        padding: 18px 4vw 24px 4vw;
+    }
+    form.glass-card, .glass-card.result-section {
+        padding: 14px 6px 10px 6px;
+    }
+    h1 {
+        font-size: 1.3rem;
+    }
+    .result-section h2 {
+        font-size: 1rem;
+    }
+} 
